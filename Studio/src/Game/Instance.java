@@ -44,9 +44,15 @@ public class Instance {
     }
 
     public Instance FindFirstAncestorOfClass(String className){
-        return null;
+        Instance[] children = this.GetChildren();
 
-        //TODO
+         for ( Instance i: children){
+            if (i.ClassName == className){
+                return i;
+            }
+         }
+
+        return null;
     }
 
     public Instance FindFirstAncestorWhichIsA(String className){
@@ -131,7 +137,7 @@ public class Instance {
         return null;
 
         //TODO
-    }
+    } 
 
 
 
