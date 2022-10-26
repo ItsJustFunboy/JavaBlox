@@ -7,9 +7,6 @@ public class Instance {
     public Instance Parent;
     public static String ClassName;
 
-    // CONSTRUCTOR \\
-
-
     public void ClearAllChildren(){
       
         for (Instance i : this.GetChildren()){
@@ -57,9 +54,14 @@ public class Instance {
     }
 
     public Instance FindFirstChild(String name){
-        return null;
+        Instance[]  Children = this.GetChildren;
 
-        //TODO
+        for (Instance i: Children){
+            if (i.Name == name){
+                return i;
+            }
+        }
+        return null;
     }
 
     public Instance FindFirstChildOfClass(String className){
