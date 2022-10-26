@@ -7,7 +7,9 @@ public class Instance {
     public Instance Parent;
     public static String ClassName;
 
-    public void ClearAllChildren(){
+    Instance[] Children;
+
+    public void ClearAllChildren(){;
       
         for (Instance i : this.GetChildren()){
             i.Destroy(i);
@@ -54,9 +56,9 @@ public class Instance {
     }
 
     public Instance FindFirstChild(String name){
-        Instance[]  Children = this.GetChildren;
+        Instance[]  children = this.GetChildren;
 
-        for (Instance i: Children){
+        for (Instance i: children){
             if (i.Name == name){
                 return i;
             }
@@ -65,9 +67,14 @@ public class Instance {
     }
 
     public Instance FindFirstChildOfClass(String className){
-        return null;
+       Instance[ ] children = this.GetChildren;
 
-        //TODO
+       for (Instance i: children  ){
+            if (i.ClassName == className){
+                return i;
+            }
+       }
+        return null;
     }
 
     public Instance FindFirstChildWhichIsA(String className){
@@ -84,12 +91,7 @@ public class Instance {
 
 
     public Instance[] GetChildren(){
-
-        Instance[] returnedArray = {};
-
-        return returnedArray;
-
-        //TODO
+        return this.Children;
     }
     public String GetFullName(){
 
