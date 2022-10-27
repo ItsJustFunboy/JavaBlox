@@ -53,16 +53,6 @@ public class Instance {
         return null;
     }
 
-    public Instance FindFirstAncestorWhichIsA(String className){
-        Instance[] children = this.GetChildren;
-
-        for(Instance i: children){ 
-            if(i.ClassName == className){
-                return i; 
-            }
-        }
-        return null;
-    }
 
     public Instance FindFirstChild(String name){
         Instance[]  children = this.GetChildren;
